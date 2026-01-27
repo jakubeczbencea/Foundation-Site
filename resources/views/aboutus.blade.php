@@ -7,19 +7,19 @@
     <!-- Hero szekció -->
     <section class="hero text-center">
         <div class="container py-5">
-            <h1 class="display-5 fw-bold mb-3">Rólunk</h1>
-            <p class="lead mb-4">
+            <h1 class="display-3 fw-bold mb-3">Rólunk</h1>
+            <p class="lead mb-4 text-light-50">
                 A Tudásodért Alapítvány célja, hogy a BGéSZC Eötvös Loránd Technikum diákjainak
                 fejlődését, tanulmányait és közösségi életét hosszú távon támogassa.
             </p>
-            <a href="/tamogatas" class="btn btn-lg cta-btn">
+            <a href="/tamogatas" class="btn btn-lg btn-cta">
                 <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
             </a>
         </div>
     </section>
 
     <!-- Küldetés, célok, iskola blokk -->
-    <section class="bg-white">
+    <section class="bg-dark-section py-5">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col">
@@ -35,43 +35,37 @@
             <div class="row g-4">
                 <!-- Kártya 1: Oktatási támogatás -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="fas fa-graduation-cap card-icon mb-3"></i>
-                            <h5 class="card-title fw-bold">Oktatási támogatás</h5>
-                            <p class="card-text text-muted">
-                                Versenyek, pályázatok és tanulmányi programok támogatása, hogy a
-                                tehetséges diákok kibontakoztathassák képességeiket.
-                            </p>
-                        </div>
+                    <div class="card-modern h-100 text-center">
+                        <i class="fas fa-graduation-cap card-icon mb-3"></i>
+                        <h5 class="fw-bold">Oktatási támogatás</h5>
+                        <p class="text-muted">
+                            Versenyek, pályázatok és tanulmányi programok támogatása, hogy a
+                            tehetséges diákok kibontakoztathassák képességeiket.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Kártya 2: Eszközfejlesztés -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="fas fa-laptop-code card-icon mb-3"></i>
-                            <h5 class="card-title fw-bold">Eszközfejlesztés</h5>
-                            <p class="card-text text-muted">
-                                Informatikai és egyéb taneszközök beszerzése, hogy az oktatás
-                                lépést tarthasson a modern technológiákkal.
-                            </p>
-                        </div>
+                    <div class="card-modern h-100 text-center">
+                        <i class="fas fa-laptop-code card-icon mb-3"></i>
+                        <h5 class="fw-bold">Eszközfejlesztés</h5>
+                        <p class="text-muted">
+                            Informatikai és egyéb taneszközök beszerzése, hogy az oktatás
+                            lépést tarthasson a modern technológiákkal.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Kártya 3: Közösségépítés -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="fas fa-people-group card-icon mb-3"></i>
-                            <h5 class="card-title fw-bold">Közösségépítés</h5>
-                            <p class="card-text text-muted">
-                                Iskolai rendezvények, kirándulások és közösségi programok támogatása,
-                                amelyek erősítik az Eötvösös diákok összetartását.
-                            </p>
-                        </div>
+                    <div class="card-modern h-100 text-center">
+                        <i class="fas fa-people-group card-icon mb-3"></i>
+                        <h5 class="fw-bold">Közösségépítés</h5>
+                        <p class="text-muted">
+                            Iskolai rendezvények, kirándulások és közösségi programok támogatása,
+                            amelyek erősítik az Eötvösös diákok összetartását.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -79,7 +73,7 @@
     </section>
 
     <!-- Kapcsolat / további info -->
-    <section class="bg-light-gray">
+    <section class="py-5">
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-md-6">
@@ -92,13 +86,13 @@
                     <p class="mb-2">
                         Iskola címe: 1204 Budapest, Török Flóris u. 89.
                     </p>
-                    <p class="mb-0">
+                    <p class="mb-0 text-muted">
                         További elérhetőségek és hivatalos információk:
-                        <a href="https://eotvosszki.hu" target="_blank">eotvosszki.hu</a>
+                        <a href="https://eotvosszki.hu" target="_blank" class="text-blue">eotvosszki.hu</a>
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-4 bg-white shadow-sm rounded">
+                    <div class="card-modern">
                         <h4 class="fw-bold mb-3">Miért fontos a támogatásod?</h4>
                         <p class="text-muted mb-3">
                             Minden adomány – legyen az kisebb vagy nagyobb összeg – hozzájárul ahhoz,
@@ -109,7 +103,7 @@
                             A támogatások felhasználásáról beszámolók és hírek formájában is tájékoztatást
                             adunk, hogy mindig lásd, mire fordítjuk a segítségedet.
                         </p>
-                        <a href="/beszamolok" class="btn btn-outline-primary">
+                        <a href="/beszamolok" class="btn btn-outline-light">
                             <i class="fas fa-file-alt me-2"></i>Beszámolók megtekintése
                         </a>
                     </div>
