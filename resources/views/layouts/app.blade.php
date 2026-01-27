@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Főoldal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us">Rólunk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Rólunk</a></li>
                     <li class="nav-item"><a class="nav-link" href="/reports">Beszámolók</a></li>
                     <li class="nav-item"><a class="nav-link" href="/news">Hírek</a></li>
                     <li class="nav-item"><a class="nav-link" href="/donation">Támogatás</a></li>
