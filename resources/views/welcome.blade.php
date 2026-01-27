@@ -10,8 +10,8 @@
                 <h1 class="display-3 fw-bold mb-4">Támogasd a BGéSZC Eötvös Loránd Technikumot!</h1>
                 <p class="lead mb-4">Az alapítvány a műszaki szakképzést támogatja eszközfejlesztéssel, programokkal, versenyekkel és rászoruló diákok segítésével.</p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="/tamogatas" class="btn btn-light btn-lg px-5">Online adományozás</a>
-                    <button class="btn btn-outline-light btn-lg px-5" data-bs-toggle="modal" data-bs-target="#adoModal">Adó 1% felajánlás</button>
+                    <a href="/donation" class="btn btn-light btn-lg px-5">Online adományozás</a>
+                    <button class="btn btn-outline-light btn-lg px-5" data-bs-toggle="modal" data-bs-target="#taxModal">Adó 1% felajánlás</button>
                 </div>
             </div>
             <div class="col-lg-6 text-center">
@@ -22,8 +22,8 @@
     </div>
 </section>
 
-<!-- Mire gyűjtünk? -->
-<section id="mire-gyujtunk" class="bg-light">
+<!-- Goals -->
+<section id="goals" class="bg-light">
     <div class="container">
         <h2 class="text-center mb-5">Mire gyűjtünk?</h2>
         <div class="row g-4">
@@ -64,14 +64,13 @@
     <div class="container">
         <h2 class="text-center mb-5">Eredményeink</h2>
         <div class="row g-4">
-            <!-- @foreach($reports as $report) dinamikusan később -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
                     <img src="{{ asset('images/report1.jpg') }}" class="card-img-top" alt="Beszámoló 1">
                     <div class="card-body">
                         <h5 class="card-title">2025-ös eszközbeszerzés</h5>
                         <p class="card-text">Három új CNC gép...</p>
-                        <a href="/beszamolok/1" class="btn btn-primary">Tovább</a>
+                        <a href="/reports/1" class="btn btn-primary">Tovább</a>
                     </div>
                 </div>
             </div>
@@ -110,9 +109,9 @@
     </div>
 </section>
 
-<!-- Adó 1% Modal -->
+<!-- Tax 1% Modal -->
 <section class="Modal">
-<div class="modal fade" id="adoModal" tabindex="-1">
+<div class="modal fade" id="taxModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

@@ -33,13 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Főoldal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/rolunk">Rólunk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/beszamolok">Beszámolók</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/hirek">Hírek</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tamogatas">Támogatás</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/kapcsolat">Kapcsolat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about-us">Rólunk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reports">Beszámolók</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/news">Hírek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/donation">Támogatás</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Kapcsolat</a></li>
                 </ul>
-                <a href="/tamogatas" class="btn cta-btn ms-2">Támogatom</a>
+                <a href="/donation" class="btn cta-btn ms-2">Támogatom</a>
             </div>
         </div>
     </nav>
@@ -57,10 +57,10 @@
                 <div class="col-md-4">
                     <h6>Gyorslinkek</h6>
                     <ul class="list-unstyled">
-                        <li><a href="/rolunk" class="text-white-50">Rólunk</a></li>
-                        <li><a href="/beszamolok" class="text-white-50">Beszámolók</a></li>
-                        <li><a href="/adatkezeles" class="text-white-50">Adatkezelés</a></li>
-                        <li><a href="/impresszum" class="text-white-50">Impresszum</a></li>
+                        <li><a href="/about-us" class="text-white-50">Rólunk</a></li>
+                        <li><a href="/reports" class="text-white-50">Beszámolók</a></li>
+                        <li><a href="/privacy-policy" class="text-white-50">Adatkezelés</a></li>
+                        <li><a href="/imprint" class="text-white-50">Impresszum</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
