@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/rolunk', function () {
     return view('aboutus');   // resources/views/aboutus.blade.php
 })->name('about');
+
+Route::get('/beszamolo', function () {
+    return view('reports');   // resources/views/reports.blade.php
+})->name('reports');

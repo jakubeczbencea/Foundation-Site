@@ -23,33 +23,33 @@
 </section>
 
 <!-- Goals -->
-<section id="goals" class="bg-dark-section py-5">
+<section id="goals" class="bg-dark-section section-padding">
     <div class="container">
         <h2 class="text-center mb-5">Mire gyűjtünk?</h2>
-        <div class="row g-4">
+        <div class="row g-5 gy-5">
             <div class="col-md-3">
-                <div class="card-modern h-100 text-center">
+                <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-tools card-icon"></i>
                     <h5>Eszközfejlesztés</h5>
                     <p class="text-muted">Műhely- és informatikai eszközök beszerzése az oktatás támogatására <br> valamint a tantermek folyamatos karbantartása és fejlesztése</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern h-100 text-center">
+                <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-users card-icon"></i>
                     <h5>Diákprogramok</h5>
                     <p class="text-muted">Táborok, csapatépítők és szervezett programok diákoknak <br> amelyek erősítik az összetartozást, és maradandó élményeket nyújtanak</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern h-100 text-center">
+                <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-trophy card-icon"></i>
                     <h5>Versenyek, projektek</h5>
                     <p class="text-muted">Versenyek és projektek lebonyolítása, amelyek ösztönzik a fejlődést <br> valamint a kiemelkedő teljesítményt nyújtó diákok díjazása.</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card-modern h-100 text-center">
+                <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-heart card-icon"></i>
                     <h5>Rászoruló diákok</h5>
                     <p class="text-muted">Rászoruló diákok támogatása egyéni segítségnyújtással <br> amely hozzájárul a tanulmányi előrehaladáshoz és a sikeres iskolai részvételhez.</p>
@@ -60,12 +60,12 @@
 </section>
 
 <!-- Eredményeink teaser -->
-<section class="py-5">
+<section class="section-padding">
     <div class="container">
         <h2 class="text-center mb-5">Eredményeink</h2>
-        <div class="row g-4">
+        <div class="row g-5 gy-5">
             <div class="col-md-4">
-                <div class="card-modern h-100 p-0 overflow-hidden">
+                <div class="card-modern h-100 p-0 overflow-hidden mb-0">
                     <img src="{{ asset('images/report1.jpg') }}" class="card-img-top" alt="Beszámoló 1">
                     <div class="p-4">
                         <h5 class="card-title">2025-ös eszközbeszerzés</h5>
@@ -80,10 +80,10 @@
 </section>
 
 <!-- Hogyan segíthetsz -->
-<section class="bg-dark-section py-5">
+<section class="bg-dark-section section-padding">
     <div class="container">
         <h2 class="text-center mb-5 text-white">Hogyan tudsz segíteni?</h2>
-        <div class="row g-4 text-center">
+        <div class="row g-5 text-center">
             <div class="col-md-4">
                 <div class="p-4">
                     <i class="fas fa-credit-card fa-3x mb-3 text-blue"></i>

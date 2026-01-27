@@ -5,8 +5,8 @@
 
 @section('content')
     <!-- Hero szekció -->
-    <section class="hero text-center">
-        <div class="container py-5">
+    <section class="hero section-padding text-center">
+        <div class="container">
             <h1 class="display-3 fw-bold mb-3">Rólunk</h1>
             <p class="lead mb-4 text-light-50">
                 A Tudásodért Alapítvány célja, hogy a BGéSZC Eötvös Loránd Technikum diákjainak
@@ -19,7 +19,7 @@
     </section>
 
     <!-- Küldetés, célok, iskola blokk -->
-    <section class="bg-dark-section py-5">
+    <section class="bg-dark-section section-padding">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col">
@@ -32,10 +32,10 @@
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-5 gy-5">
                 <!-- Kártya 1: Oktatási támogatás -->
                 <div class="col-md-4">
-                    <div class="card-modern h-100 text-center">
+                    <div class="card-modern h-100 text-center mb-0">
                         <i class="fas fa-graduation-cap card-icon mb-3"></i>
                         <h5 class="fw-bold">Oktatási támogatás</h5>
                         <p class="text-muted">
@@ -47,7 +47,7 @@
 
                 <!-- Kártya 2: Eszközfejlesztés -->
                 <div class="col-md-4">
-                    <div class="card-modern h-100 text-center">
+                    <div class="card-modern h-100 text-center mb-0">
                         <i class="fas fa-laptop-code card-icon mb-3"></i>
                         <h5 class="fw-bold">Eszközfejlesztés</h5>
                         <p class="text-muted">
@@ -59,7 +59,7 @@
 
                 <!-- Kártya 3: Közösségépítés -->
                 <div class="col-md-4">
-                    <div class="card-modern h-100 text-center">
+                    <div class="card-modern h-100 text-center mb-0">
                         <i class="fas fa-people-group card-icon mb-3"></i>
                         <h5 class="fw-bold">Közösségépítés</h5>
                         <p class="text-muted">
@@ -73,9 +73,9 @@
     </section>
 
     <!-- Kapcsolat / további info -->
-    <section class="py-5">
+    <section class="section-padding">
         <div class="container">
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-5">
                 <div class="col-md-6">
                     <h3 class="fw-bold mb-3">Kapcsolat az iskolával</h3>
                     <p class="text-muted">

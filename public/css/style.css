@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--dark-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -82,6 +83,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-dark-section {
     background-color: #111827;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
 }
 
 .text-blue {
