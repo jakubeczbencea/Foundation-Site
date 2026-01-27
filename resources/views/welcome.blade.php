@@ -31,28 +31,28 @@
                 <div class="card-modern h-100 text-center">
                     <i class="fas fa-tools card-icon"></i>
                     <h5>Eszközfejlesztés</h5>
-                    <p class="text-muted">Műhelyek, informatikai eszközök beszerzése.</p>
+                    <p class="text-muted">Műhely- és informatikai eszközök beszerzése az oktatás támogatására <br> valamint a tantermek folyamatos karbantartása és fejlesztése</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card-modern h-100 text-center">
                     <i class="fas fa-users card-icon"></i>
                     <h5>Diákprogramok</h5>
-                    <p class="text-muted">Táborok, csapatépítők.</p>
+                    <p class="text-muted">Táborok, csapatépítők és szervezett programok diákoknak <br> amelyek erősítik az összetartozást, és maradandó élményeket nyújtanak</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card-modern h-100 text-center">
                     <i class="fas fa-trophy card-icon"></i>
                     <h5>Versenyek, projektek</h5>
-                    <p class="text-muted">Felkészülés díjakra.</p>
+                    <p class="text-muted">Versenyek és projektek lebonyolítása, amelyek ösztönzik a fejlődést <br> valamint a kiemelkedő teljesítményt nyújtó diákok díjazása.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card-modern h-100 text-center">
                     <i class="fas fa-heart card-icon"></i>
                     <h5>Rászoruló diákok</h5>
-                    <p class="text-muted">Egyéni támogatások.</p>
+                    <p class="text-muted">Rászoruló diákok támogatása egyéni segítségnyújtással <br> amely hozzájárul a tanulmányi előrehaladáshoz és a sikeres iskolai részvételhez.</p>
                 </div>
             </div>
         </div>
