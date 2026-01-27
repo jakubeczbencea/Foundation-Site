@@ -111,8 +111,8 @@
 
 <!-- Tax 1% Modal -->
 <section class="Modal">
-<div class="modal fade" id="taxModal" tabindex="-1">
-    <div class="modal-dialog">
+<div class="modal fade" id="taxModal">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Adó 1% felajánlás</h5>
