@@ -11,38 +11,51 @@
 <body class="d-flex flex-column min-vh-100">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="/">
-            <i class="fas fa-graduation-cap me-2"></i>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top shadow-lg">
+    <div class="container-fluid px-4 px-lg-5">
+        <!-- Logo BAL -->
+        <a class="navbar-brand fw-bold fs-3 flex-shrink-0" href="/">
+            <i class="fas fa-graduation-cap text-primary me-2"></i>
             Tudásodért Alapítvány
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Mobil menü gomb -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- MENÜ KÖZÉPEN -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Főoldal</a>
+                    <a class="nav-link px-4 py-2 rounded-pill" href="/">Főoldal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">Rólunk</a>
+                    <a class="nav-link px-4 py-2 rounded-pill" href="{{ route('about') }}">Rólunk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/beszamolo">Beszámolók</a>
+                    <a class="nav-link px-4 py-2 rounded-pill" href="/beszamolo">Beszámolók</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/hirek">Hírek</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tamogatas">
-                        <i class="fas fa-heart me-1"></i>Támogatás
-                    </a>
+                    <a class="nav-link px-4 py-2 rounded-pill" href="/hirek">Hírek</a>
                 </li>
             </ul>
+
+            <!-- Gombok JOBB -->
+            <div class="d-flex gap-2 ms-lg-4">
+                <a href="/kapcsolat" class="btn btn-outline-light btn-sm px-4 py-2 fw-semibold rounded-pill">
+                    <i class="fas fa-envelope me-1"></i>Kapcsolat
+                </a>
+                <a href="/tamogatas" class="btn btn-primary btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
+                    <i class="fas fa-heart me-1"></i>Támogatom
+                </a>
+            </div>
         </div>
     </div>
 </nav>
+
+
+
 
 <!-- Fő tartalom -->
 <main class="flex-grow-1">

@@ -31,14 +31,14 @@
                 <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-tools card-icon"></i>
                     <h5>Eszközfejlesztés</h5>
-                    <p class="text-muted">Műhely- és informatikai eszközök beszerzése az oktatás támogatására <br> valamint a tantermek folyamatos karbantartása és fejlesztése</p>
+                    <p class="text-muted">Műhely- és informatikai eszközök beszerzése az oktatás támogatására <br> valamint a tantermek folyamatos karbantartása és fejlesztése.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card-modern h-100 text-center mb-0">
                     <i class="fas fa-users card-icon"></i>
                     <h5>Diákprogramok</h5>
-                    <p class="text-muted">Táborok, csapatépítők és szervezett programok diákoknak <br> amelyek erősítik az összetartozást, és maradandó élményeket nyújtanak</p>
+                    <p class="text-muted">Táborok, csapatépítők és szervezett programok diákoknak <br> amelyek erősítik az összetartozást, és maradandó élményeket nyújtanak.</p>
                 </div>
             </div>
             <div class="col-md-3">

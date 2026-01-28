@@ -90,7 +90,7 @@
                     <div class="card-modern h-100 text-center p-5 border-primary">
                         <i class="fas fa-hand-holding-heart fa-4x text-blue mb-4"></i>
                         <h3 class="h4 fw-bold mb-3">Egyedi összeg</h3>
-                        <p class="text-light-50 mb-4">Bármennyi összeget adományozhatsz – akár 1000 Ft is számít!</p>
+                        <p class="text-light-50 mb-4">Bármennyi összeget adományozhatsz – Minden fillér számít!</p>
                         <button class="btn btn-blue-gradient btn-lg w-100" onclick="selectCustom()">
                             Egyedi összeg <i class="fas fa-gift ms-2"></i>
                         </button>
