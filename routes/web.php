@@ -13,3 +13,7 @@ Route::get('/rolunk', function () {
 Route::get('/beszamolo', function () {
     return view('reports');   // resources/views/reports.blade.php
 })->name('reports');
+
+Route::get('/tamogatas', function () {
+    return view('donation');   // resources/views/donation.blade.php
+})->name('donation');
