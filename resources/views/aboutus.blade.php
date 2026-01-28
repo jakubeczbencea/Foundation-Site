@@ -103,7 +103,7 @@
                             A támogatások felhasználásáról beszámolók és hírek formájában is tájékoztatást
                             adunk, hogy mindig lásd, mire fordítjuk a segítségedet.
                         </p>
-                        <a href="/beszamolok" class="btn btn-outline-light">
+                        <a href="/beszamolo" class="btn btn-outline-light">
                             <i class="fas fa-file-alt me-2"></i>Beszámolók megtekintése
                         </a>
                     </div>

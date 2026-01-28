@@ -46,7 +46,7 @@
                 <a href="/kapcsolat" class="btn btn-outline-light btn-sm px-4 py-2 fw-semibold rounded-pill">
                     <i class="fas fa-envelope me-1"></i>Kapcsolat
                 </a>
-                <a href="/tamogatas" class="btn btn-primary btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
+                <a href="/tamogatas" class="btn btn-warning btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
                     <i class="fas fa-heart me-1"></i>Támogatom
                 </a>
             </div>
