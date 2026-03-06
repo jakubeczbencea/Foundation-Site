@@ -6,7 +6,7 @@
     <!-- Hero -->
     <section class="hero section-padding">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center text-center ">
                 <div class="col-lg-6">
                     <h1 class="display-3 fw-bold mb-4">Támogasd a diákjainkat</h1>
                     <p class="lead fs-3 mb-5 opacity-90">
@@ -32,9 +32,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="{{ asset('images/donation-hero.jpg') }}" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
                 </div>
             </div>
         </div>
