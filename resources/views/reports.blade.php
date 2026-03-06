@@ -11,8 +11,8 @@
                 lásd, mire használtuk fel a támogatásokat
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="/tamogatas" class="btn btn-blue-gradient btn-lg px-5 py-3">
-                    <i class="fas fa-heart me-2"></i>Támogasd a következő célt
+                <a href="/tamogatas" class="btn btn-lg btn-cta">
+                    <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
                 </a>
             </div>
         </div>
@@ -64,7 +64,8 @@
                         <div class="position-absolute top-0 end-0 p-3">
                             <span class="badge bg-secondary fs-6">2025 Q4</span>
                         </div>
-                        <img src="{{ asset('images/cnc-machines.jpg') }}" class="rounded-3 mb-4 shadow-lg" style="height: 250px; object-fit: cover; width: 100%;">
+                        <img src="{{ asset('images/cnc-machines.jpg') }}" class="rounded-3 mb-4 shadow-lg"
+                            style="height: 250px; object-fit: cover; width: 100%;">
                         <h2 class="h3 fw-bold mb-3">Három új CNC gép a műhelyben</h2>
                         <p class="text-light-50 mb-4 lead">
                             A támogatóinknak köszönhetően beszerzésre került 3 db professzionális CNC megmunkáló
@@ -72,7 +73,8 @@
                             elsajátítását.
                         </p>
                         <div class="d-flex align-items-center mb-4">
-                            <img src="{{ asset('images/admin-avatar.jpg') }}" class="rounded-circle me-3" width="50" height="50" alt="Admin">
+                            <img src="{{ asset('images/admin-avatar.jpg') }}" class="rounded-circle me-3" width="50"
+                                height="50" alt="Admin">
                             <div>
                                 <div class="fw-bold text-blue">...r</div>
                                 <small class="text-light-50">Alapítvány elnöke</small>
@@ -90,7 +92,8 @@
                         <div class="position-absolute top-0 end-0 p-3">
                             <span class="badge bg-primary fs-6 text-white">2025 Q3</span>
                         </div>
-                        <img src="{{ asset('images/robotics-camp.jpg') }}" class="rounded-3 mb-4 shadow-lg" style="height: 250px; object-fit: cover; width: 100%;">
+                        <img src="{{ asset('images/robotics-camp.jpg') }}" class="rounded-3 mb-4 shadow-lg"
+                            style="height: 250px; object-fit: cover; width: 100%;">
                         <h2 class="h3 fw-bold mb-3">Robotika tábor 45 diák számára</h2>
                         <p class="text-light-50 mb-4 lead">
                             Szeptemberben 45 rászoruló diák vehetett részt 5 napos robotika táborunkban,
@@ -98,7 +101,8 @@
                             robotika alapjaival.
                         </p>
                         <div class="d-flex align-items-center mb-4">
-                            <img src="{{ asset('images/teacher-avatar.jpg') }}" class="rounded-circle me-3" width="50" height="50" alt="Tanár">
+                            <img src="{{ asset('images/teacher-avatar.jpg') }}" class="rounded-circle me-3" width="50"
+                                height="50" alt="Tanár">
                             <div>
                                 <div class="fw-bold text-blue">...</div>
                                 <small class="text-light-50">Tábor vezető</small>
@@ -116,7 +120,8 @@
                         <div class="position-absolute top-3 end-3">
                             <span class="badge bg-success fs-6 text-white">2025 Q2</span>
                         </div>
-                        <img src="{{ asset('images/competition-win.jpg') }}" class="rounded-3 mb-3 shadow-lg" style="height: 180px; object-fit: cover; width: 100%;">
+                        <img src="{{ asset('images/competition-win.jpg') }}" class="rounded-3 mb-3 shadow-lg"
+                            style="height: 180px; object-fit: cover; width: 100%;">
                         <h3 class="h5 fw-bold mb-3">Országos 1. hely!</h3>
                         <p class="text-light-50 mb-3">
                             12.I osztály robotcsapatunk robotversenyen aranyérmet szerzett!
@@ -133,7 +138,8 @@
                         <div class="position-absolute top-3 end-3">
                             <span class="badge bg-warning fs-6 text-dark">2025 Q1</span>
                         </div>
-                        <img src="{{ asset('images/new-laptops.jpg') }}" class="rounded-3 mb-3 shadow-lg" style="height: 180px; object-fit: cover; width: 100%;">
+                        <img src="{{ asset('images/new-laptops.jpg') }}" class="rounded-3 mb-3 shadow-lg"
+                            style="height: 180px; object-fit: cover; width: 100%;">
                         <h3 class="h5 fw-bold mb-3">42 új laptop programozáshoz</h3>
                         <p class="text-light-50 mb-3">
                             Informatika terem teljes felszerelése Python oktatáshoz.
@@ -150,7 +156,8 @@
                         <div class="position-absolute top-3 end-3">
                             <span class="badge bg-info fs-6 text-white">2024 Q4</span>
                         </div>
-                        <img src="{{ asset('images/student-support.jpg') }}" class="rounded-3 mb-3 shadow-lg" style="height: 180px; object-fit: cover; width: 100%;">
+                        <img src="{{ asset('images/student-support.jpg') }}" class="rounded-3 mb-3 shadow-lg"
+                            style="height: 180px; object-fit: cover; width: 100%;">
                         <h3 class="h5 fw-bold mb-3">Egyéni támogatások</h3>
                         <p class="text-light-50 mb-3">
                             18 rászoruló diák kapott laptopot és tanfolyami díjat.

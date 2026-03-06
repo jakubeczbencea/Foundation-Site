@@ -18,3 +18,6 @@ Route::get('/tamogatas', function () {
     return view('donation');   // resources/views/donation.blade.php
 })->name('donation');
 
+Route::get('/hirek', function () {
+    return view('news');   // resources/views/news.blade.php
+})->name('news');

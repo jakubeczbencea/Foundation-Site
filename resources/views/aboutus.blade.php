@@ -1,4 +1,3 @@
-{{-- resources/views/aboutus.blade.php --}}
 @extends('layouts.app')
 
 @section('title', 'Rólunk - Tudásodért Alapítvány')
