@@ -11,7 +11,7 @@
                 lásd, mire használtuk fel a támogatásokat
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="/tamasogatas" class="btn btn-blue-gradient btn-lg px-5 py-3">
+                <a href="/tamogatas" class="btn btn-blue-gradient btn-lg px-5 py-3">
                     <i class="fas fa-heart me-2"></i>Támogasd a következő célt
                 </a>
             </div>
