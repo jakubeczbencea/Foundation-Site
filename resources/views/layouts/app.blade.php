@@ -58,7 +58,7 @@
 
 
 <!-- Fő tartalom -->
-<main class="flex-grow-1">
+<main class="grow">
     @yield('content')
 </main>
 
