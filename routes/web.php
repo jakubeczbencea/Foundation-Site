@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,3 +22,11 @@ Route::get('/tamogatas', function () {
 Route::get('/hirek', function () {
     return view('news');   // resources/views/news.blade.php
 })->name('news');
+
+Route::get('/kapcsolat', function () {
+    return view('contacts');   // resources/views/contacts.blade.php
+})->name('contacts');
+
+// POST: Kapcsolati űrlap elküldése
+Route::post('/kapcsolat', [ContactController::class, 'send'])
+    ->name('contact.send');

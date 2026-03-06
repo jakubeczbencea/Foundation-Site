@@ -64,7 +64,7 @@
                         <div class="position-absolute top-0 end-0 p-3">
                             <span class="badge bg-secondary fs-6">2025 Q4</span>
                         </div>
-                        <img src="{{ asset('images/cnc-machines.jpg') }}" class="rounded-3 mb-4 shadow-lg"
+                        <img src="{{ asset('images/cnc_machine.jpg') }}" class="rounded-3 mb-4 shadow-lg"
                             style="height: 250px; object-fit: cover; width: 100%;">
                         <h2 class="h3 fw-bold mb-3">Három új CNC gép a műhelyben</h2>
                         <p class="text-light-50 mb-4 lead">
@@ -76,7 +76,7 @@
                             <img src="{{ asset('images/admin-avatar.jpg') }}" class="rounded-circle me-3" width="50"
                                 height="50" alt="Admin">
                             <div>
-                                <div class="fw-bold text-blue">...r</div>
+                                <div class="fw-bold text-blue">...</div>
                                 <small class="text-light-50">Alapítvány elnöke</small>
                             </div>
                         </div>
@@ -118,13 +118,13 @@
                 <div class="col-lg-4">
                     <div class="card-modern h-100 p-4 mb-0">
                         <div class="position-absolute top-3 end-3">
-                            <span class="badge bg-success fs-6 text-white">2025 Q2</span>
+                            <span class="badge bg-success fs-6 text-white">2025. szept. 18.</span>
                         </div>
                         <img src="{{ asset('images/competition-win.jpg') }}" class="rounded-3 mb-3 shadow-lg"
                             style="height: 180px; object-fit: cover; width: 100%;">
-                        <h3 class="h5 fw-bold mb-3">Országos 1. hely!</h3>
+                        <h3 class="h5 fw-bold mb-3">EuroSkills 2025</h3>
                         <p class="text-light-50 mb-3">
-                            12.I osztály robotcsapatunk robotversenyen aranyérmet szerzett!
+                            A EuroSkills Herning 2025 versenyen a magyar csapat történelmi sikert ért el: 4 arany-, 2 ezüst-, 5 bronz- és több kiválósági érmet szereztek, amivel ez az egyik legerősebb magyar szereplés a verseny történetében. Aranyérmes lett Stefán Kornél szoftverfejlesztő, Mrakovics Olivér webfejlesztő, a Simon Tamás–Téringer Gergő informatikai rendszerüzemeltető páros és a Császi Sándor–Izsó Roland ipar 4.0 duó; közülük Stefán Kornél 795 ponttal a „Nemzet Legjobbja” címet is elnyerte. 
                         </p>
                         <a href="#" class="btn btn-outline-light w-100">
                             Olvasás <i class="fas fa-arrow-right ms-1"></i>
