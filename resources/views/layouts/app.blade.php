@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top shadow-lg">
     <div class="container-fluid px-4 px-lg-5">
         <!-- Logo BAL -->
-        <a class="navbar-brand fw-bold fs-3 flex-shrink-0" href="/">
+        <a class="navbar-brand fw-bold fs-3 shrink-0" href="/">
             <i class="fas fa-graduation-cap text-primary me-2"></i>
             Tudásodért Alapítvány
         </a>
