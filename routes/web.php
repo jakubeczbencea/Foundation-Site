@@ -17,3 +17,4 @@ Route::get('/beszamolo', function () {
 Route::get('/tamogatas', function () {
     return view('donation');   // resources/views/donation.blade.php
 })->name('donation');
+

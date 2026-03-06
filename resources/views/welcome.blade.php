@@ -10,7 +10,7 @@
                 <h1 class="display-3 fw-bold mb-4">Támogasd a BGéSZC Eötvös Loránd Technikumot!</h1>
                 <p class="lead mb-4 text-light-50">Az alapítvány a műszaki szakképzést támogatja eszközfejlesztéssel, programokkal, versenyekkel és rászoruló diákok segítésével.</p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="/donation" class="btn btn-cta btn-lg px-5">Online adományozás</a>
+                    <a href="/tamogatas" class="btn btn-cta btn-lg px-5">Online adományozás</a>
                     <button class="btn btn-outline-light btn-lg px-5" data-bs-toggle="modal" data-bs-target="#taxModal">Adó 1% felajánlás</button>
                 </div>
             </div>
