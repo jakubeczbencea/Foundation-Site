@@ -6,7 +6,7 @@
     <!-- Hero -->
     <section class="hero section-padding">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center text-center ">
                 <div class="col-lg-6">
                     <h1 class="display-3 fw-bold mb-4">Támogasd a diákjainkat</h1>
                     <p class="lead fs-3 mb-5 opacity-90">
@@ -33,9 +33,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="{{ asset('images/donation-hero.jpg') }}" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
-                </div>
             </div>
         </div>
     </section>
@@ -60,10 +57,10 @@
                             <span>3,240,000 Ft</span>
                             <span class="fw-bold text-blue">5,000,000 Ft</span>
                         </div>
-                        <button class="btn btn-blue-gradient btn-lg w-100 mb-3" onclick="selectGoal(1)">
+                        <button class="btn btn-outline-light btn-lg w-100 mb-3" onclick="selectGoal(1)">
                             Támogatom ezt <i class="fas fa-arrow-right ms-2"></i>
                         </button>
-                        <small class="text-light-50">Hiányzik: 1,760,000 Ft</small>
+                        <small class="text-light-50">Hiányzik: //TODO </small>
                     </div>
                 </div>
 
@@ -87,11 +84,11 @@
 
                 <!-- Egyedi támogatás -->
                 <div class="col-lg-4 col-md-12">
-                    <div class="card-modern h-100 text-center p-5 border-primary">
+                    <div class="card-modern h-100 text-center p-5">
                         <i class="fas fa-hand-holding-heart fa-4x text-blue mb-4"></i>
                         <h3 class="h4 fw-bold mb-3">Egyedi összeg</h3>
-                        <p class="text-light-50 mb-4">Bármennyi összeget adományozhatsz – Minden fillér számít!</p>
-                        <button class="btn btn-blue-gradient btn-lg w-100" onclick="selectCustom()">
+                        <p class="text-light-50 mb-4">Bármennyi összeget adományozhatsz – Minden összeg számít!</p>
+                        <button class="btn btn-outline-light btn-lg w-100 mb-3" onclick="selectCustom()">
                             Egyedi összeg <i class="fas fa-gift ms-2"></i>
                         </button>
                     </div>
@@ -102,28 +99,28 @@
 
     <!-- Adományozási űrlap -->
     <section class="section-padding">
-        <div class="container">
+        <div class="container text-">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="card-modern p-5 shadow-lg">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Név *</label>
-                                <input type="text" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="Teljes neved" required>
+                                        <input type="text" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="Teljes neved" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Email *</label>
-                                <input type="email" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="email@example.com" required>
+                                        <input type="email" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="email@example.com" required>
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-5 mb-3">Üzenet (opcionális)</label>
-                                <textarea class="form-control bg-transparent border-blue text-light" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
+                                        <textarea class="form-control bg-transparent border-blue text-light" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Összeg *</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-blue-gradient text-white border-0">Ft</span>
-                                    <input type="number" class="form-control form-control-lg bg-transparent border-start-0 text-light text-end fs-3" placeholder="5000" min="1000" step="1000" id="donationAmount">
+                                            <input type="number" class="form-control form-control-lg bg-transparent border-start-0 text-light text-end fs-3" placeholder="5000" min="1000" step="1000" id="donationAmount">
                                 </div>
                             </div>
                             <div class="col-md-6 align-self-end">

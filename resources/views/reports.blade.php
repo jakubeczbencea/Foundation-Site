@@ -6,7 +6,7 @@
     <!-- Hero szekció -->
     <section class="hero section-padding">
         <div class="container text-center">
-            <h1 class="mb-4">Beszámolók és eredményeink</h1>
+            <h1 class="display-3 fw-bold mb-3">Beszámolók és eredményeink</h1>
             <p class="lead fs-3 mb-5 mx-auto" style="max-width: 600px;">
                 lásd, mire használtuk fel a támogatásokat
             </p>
