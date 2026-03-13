@@ -34,6 +34,10 @@ Route::get('/kapcsolat', function () {
     return view('contacts');   // resources/views/contacts.blade.php
 })->name('contacts');
 
+Route::get('/impresszum', function () {
+    return view('imprint'); // resources/views/imprint.blade.php
+});
+
 // POST: Kapcsolati űrlap elküldése
 Route::post('/kapcsolat', [ContactController::class, 'send'])
     ->name('contact.send');
