@@ -49,6 +49,14 @@
                 <a href="/tamogatas" class="btn btn-warning btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
                     <i class="fas fa-heart me-1"></i>Támogatom
                 </a>
+                @guest
+                    <a href="{{ route('register') }}" class="btn btn-outline-info btn-sm px-4 py-2 fw-semibold rounded-pill">
+                        <i class="fas fa-user-plus me-1"></i>Regisztráció
+                    </a>
+                    <a href="{{ route('login') }}" class="btn btn-primary btn-sm px-4 py-2 fw-bold rounded-pill">
+                        <i class="fas fa-sign-in-alt me-1"></i>Bejelentkezés
+                    </a>
+                @endguest
             </div>
         </div>
     </div>
