@@ -38,6 +38,10 @@ Route::get('/impresszum', function () {
     return view('imprint'); // resources/views/imprint.blade.php
 });
 
+Route::get('/adatvedelem', function () {
+    return view('privacy_policy'); // resources/views/privacy_policy.blade.php
+});
+
 // POST: Kapcsolati űrlap elküldése
 Route::post('/kapcsolat', [ContactController::class, 'send'])
     ->name('contact.send');
