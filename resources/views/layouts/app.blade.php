@@ -49,6 +49,17 @@
                 <a href="/tamogatas" class="btn btn-warning btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
                     <i class="fas fa-heart me-1"></i>Támogatom
                 </a>
+                @auth
+                    <a href="{{ route('admin.dashboard') }}" class="btn btn-outline-info btn-sm px-4 py-2 fw-semibold rounded-pill">
+                        <i class="fas fa-gauge-high me-1"></i>Admin
+                    </a>
+                    <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-danger btn-sm px-4 py-2 fw-semibold rounded-pill">
+                            <i class="fas fa-sign-out-alt me-1"></i>Kijelentkezés
+                        </button>
+                    </form>
+                @endauth
                 @guest
                     <a href="{{ route('register') }}" class="btn btn-outline-info btn-sm px-4 py-2 fw-semibold rounded-pill">
                         <i class="fas fa-user-plus me-1"></i>Regisztráció
