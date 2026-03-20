@@ -3,7 +3,7 @@
 @section('title', 'Adatvédelmi nyilatkozat')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mb-5">
         <h1>Adatvédelmi nyilatkozat</h1>
         <p>Ez a nyilatkozat a <strong>{{ config('app.name', 'Laravel') }}</strong> weboldal személyes adatainak kezelését szabályozza.</p>
 
