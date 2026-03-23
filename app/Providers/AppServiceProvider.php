@@ -2,23 +2,31 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\Models\Post;  // cseréld a saját modelledre
+use App\Policies\PostPolicy;  // cseréld a saját policy-dra
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
-class AppServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * The model to policy mappings for the application.
      */
-    public function register(): void
-    {
-        //
-    }
+    protected $policies = [
+        Post::class => PostPolicy::class,  // itt regisztráld: Model => Policy
+        // pl. User::class => UserPolicy::class,
+    ];
 
     /**
-     * Bootstrap any application services.
+     * Register any authentication / authorization services.
      */
     public function boot(): void
     {
-        //
+        $this->registerPolicies();
+
+        // Opcionális: Gates itt is definiálhatók
+        // Gate::define('edit-post', function (User $user, Post $post) {
+        //     return $user->id === $post->user_id;
+        // });
     }
 }
