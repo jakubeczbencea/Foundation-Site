@@ -8,43 +8,24 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ============================
+// KÖZÖS OLDALAK
+// ============================
 
-Route::get('/rolunk', function () {
-    return view('aboutus');   // resources/views/aboutus.blade.php
-})->name('about');
-
-Route::get('/beszamolo', function () {
-    return view('reports');   // resources/views/reports.blade.php
-})->name('reports');
-
-Route::get('/tamogatas', function () {
-    return view('donation');   // resources/views/donation.blade.php
-})->name('donation');
-
-Route::get('/hirek', function () {
-    return view('news');   // resources/views/news.blade.php
-})->name('news');
-
-Route::get('/kapcsolat', function () {
-    return view('contacts');   // resources/views/contacts.blade.php
-})->name('contacts');
-
-Route::get('/impresszum', function () {
-    return view('imprint'); // resources/views/imprint.blade.php
-});
-
-Route::get('/adatvedelem', function () {
-    return view('privacy_policy'); // resources/views/privacy_policy.blade.php
-});
+Route::get('/', [PageController::class, 'welcome'])->name('home');
+Route::get('/rolunk', [PageController::class, 'about'])->name('about');
+Route::get('/beszamolo', [PageController::class, 'reports'])->name('reports');
+Route::get('/tamogatas', [PageController::class, 'donation'])->name('donation');
+Route::get('/hirek', [PageController::class, 'news'])->name('news');
+Route::get('/kapcsolat', [PageController::class, 'contacts'])->name('contacts');
+Route::get('/impresszum', [PageController::class, 'imprint'])->name('imprint');
+Route::get('/adatvedelem', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 
 // POST: Kapcsolati űrlap elküldése
-Route::post('/kapcsolat', [ContactController::class, 'send'])
-    ->name('contact.send');
+Route::post('/kapcsolat', [ContactController::class, 'send'])->name('contact.send');
 
 
 // ============================

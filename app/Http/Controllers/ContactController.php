@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function send(Request $request)
+    public function send(ContactRequest $request)
     {
-        $validated = $request->validate([
-            'name'    => 'required|string|max:255',
-            'email'   => 'required|email',
-            'subject' => 'required|string|max:255',
-            'message' => 'required|string',
-        ]);
+        $validated = $request->validated();
 
-        // Itt később: mail küldés vagy adatbázis mentés
+        // Email küldés adminnak
+        Mail::raw("Új üzenet a kapcsolati űrlapról:\n\nNév: {$validated['name']}\nEmail: {$validated['email']}\nTárgy: {$validated['subject']}\n\nÜzenet:\n{$validated['message']}", function ($message) use ($validated) {
+            $message->to(config('mail.from.address'))
+                    ->subject("Új üzenet: {$validated['subject']}")
+                    ->replyTo($validated['email']);
+        });
 
-        return back()->with('status', 'Üzenetedet sikeresen elküldtük!');
+        return back()->with('success', 'Üzenetedet sikeresen elküldtük! Hamarosan kapcsolatba lépünk veled.');
     }
 }
