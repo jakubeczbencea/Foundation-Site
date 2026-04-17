@@ -60,14 +60,7 @@
                         </button>
                     </form>
                 @endauth
-                @guest
-                    <a href="{{ route('register') }}" class="btn btn-outline-info btn-sm px-4 py-2 fw-semibold rounded-pill">
-                        <i class="fas fa-user-plus me-1"></i>Regisztráció
-                    </a>
-                    <a href="{{ route('login') }}" class="btn btn-primary btn-sm px-4 py-2 fw-bold rounded-pill">
-                        <i class="fas fa-sign-in-alt me-1"></i>Bejelentkezés
-                    </a>
-                @endguest
+
             </div>
         </div>
     </div>
