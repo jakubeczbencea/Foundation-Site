@@ -44,7 +44,7 @@
             <div class="row g-4">
                 <!-- Cél 1 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card-modern h-100 text-center p-5 position-relative">
+                    <div id="goal-card-1" class="card-modern h-100 text-center p-5 position-relative goal-card border-3" onclick="selectGoal(1)">
                         <div class="position-absolute top-4 start-4">
                             <span class="badge bg-success fs-6 text-white">Aktív</span>
                         </div>
@@ -57,7 +57,7 @@
                             <span>3,240,000 Ft</span>
                             <span class="fw-bold text-blue">5,000,000 Ft</span>
                         </div>
-                        <button class="btn btn-outline-light btn-lg w-100 mb-3" onclick="selectGoal(1)">
+                        <button type="button" class="btn btn-outline-light btn-lg w-100 mb-3">
                             Támogatom ezt <i class="fas fa-arrow-right ms-2"></i>
                         </button>
                         <small class="text-light-50">Hiányzik: //TODO </small>
@@ -66,7 +66,7 @@
 
                 <!-- Cél 2 -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card-modern h-100 text-center p-5">
+                    <div id="goal-card-2" class="card-modern h-100 text-center p-5 goal-card border-3" onclick="selectGoal(2)">
                         <i class="fas fa-users fa-4x text-blue mb-4"></i>
                         <h3 class="h4 fw-bold mb-3">Diákprogramok</h3>
                         <div class="progress mx-auto mb-4" style="height: 12px; width: 250px;">
@@ -76,7 +76,7 @@
                             <span>2,100,000 Ft</span>
                             <span class="fw-bold">5,000,000 Ft</span>
                         </div>
-                        <button class="btn btn-outline-light btn-lg w-100 mb-3" onclick="selectGoal(2)">
+                        <button type="button" class="btn btn-outline-light btn-lg w-100 mb-3">
                             Támogatom <i class="fas fa-arrow-right ms-2"></i>
                         </button>
                     </div>
@@ -84,11 +84,11 @@
 
                 <!-- Egyedi támogatás -->
                 <div class="col-lg-4 col-md-12">
-                    <div class="card-modern h-100 text-center p-5">
+                    <div id="goal-card-0" class="card-modern h-100 text-center p-5 goal-card border-3" onclick="selectCustom()">
                         <i class="fas fa-hand-holding-heart fa-4x text-blue mb-4"></i>
                         <h3 class="h4 fw-bold mb-3">Egyedi összeg</h3>
                         <p class="text-light-50 mb-4">Bármennyi összeget adományozhatsz – Minden összeg számít!</p>
-                        <button class="btn btn-outline-light btn-lg w-100 mb-3" onclick="selectCustom()">
+                        <button type="button" class="btn btn-outline-light btn-lg w-100 mb-3">
                             Egyedi összeg <i class="fas fa-gift ms-2"></i>
                         </button>
                     </div>
@@ -98,12 +98,16 @@
     </section>
 
     <!-- Adományozási űrlap -->
-    <section class="section-padding">
+    <section id="donation-form-section" class="section-padding">
         <div class="container text-">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <form action="{{ route('donation.checkout') }}" method="POST" class="card-modern p-5 shadow-lg">
                         @csrf
+                        <div class="text-center mb-4">
+                            <h2 class="h3 fw-bold text-blue mb-1" id="formGoalTitle">Eszközpark bővítés Támogatása</h2>
+                            <p class="text-light-50">Kérjük, töltsd ki az alábbi adatokat a támogatáshoz</p>
+                        </div>
                         <input type="hidden" name="goal" id="selectedGoalInput" value="Eszközpark bővítés">
                         <div class="row g-4">
                             <div class="col-md-6">
@@ -168,29 +172,80 @@
         </div>
     </section>
 
+    <style>
+        .goal-card {
+            cursor: pointer;
+            transition: all 0.3s ease !important;
+            border: 3px solid transparent !important;
+        }
+        .goal-card:hover {
+            border-color: rgba(59, 130, 246, 0.5) !important;
+            transform: translateY(-10px);
+        }
+        .goal-card.selected-goal {
+            border-color: #3B82F6 !important;
+            background-color: rgba(59, 130, 246, 0.1) !important;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
+        }
+        .goal-card.selected-goal .btn-outline-light {
+            background-color: #3B82F6 !important;
+            border-color: #3B82F6 !important;
+            color: white !important;
+        }
+    </style>
+
     <script>
         let selectedGoal = 1;
+
+        function updateVisualSelection(goalId) {
+            // Összes kártyáról levesszük a kijelölést
+            document.querySelectorAll('.goal-card').forEach(card => {
+                card.classList.remove('selected-goal');
+            });
+
+            // A kiválasztott kártyához hozzáadjuk
+            const selectedCSSCard = document.getElementById('goal-card-' + goalId);
+            if (selectedCSSCard) {
+                selectedCSSCard.classList.add('selected-goal');
+            }
+        }
+
+        function scrollToForm() {
+            document.getElementById('donation-form-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
         function selectGoal(goalId) {
             selectedGoal = goalId;
-            document.querySelectorAll('[onclick^="selectGoal"]').forEach(btn => btn.classList.remove('btn-blue-gradient'));
 
-            // Cél nevének frissítése a hidden inputban
             const goals = {
                 1: 'Eszközpark bővítés',
                 2: 'Diákprogramok'
             };
-            document.getElementById('selectedGoalInput').value = goals[goalId];
 
-            if (event && event.target) {
-                event.target.classList.add('btn-blue-gradient');
-            }
+            const goalName = goals[goalId];
+            document.getElementById('selectedGoalInput').value = goalName;
+            document.getElementById('formGoalTitle').textContent = goalName + ' Támogatása';
+
+            updateVisualSelection(goalId);
+            scrollToForm();
         }
 
         function selectCustom() {
             selectedGoal = 0;
-            document.getElementById('selectedGoalInput').value = 'Egyedi támogatás';
-            document.querySelectorAll('[onclick^="selectGoal"]').forEach(btn => btn.classList.remove('btn-blue-gradient'));
+            const goalName = 'Egyedi támogatás';
+            document.getElementById('selectedGoalInput').value = goalName;
+            document.getElementById('formGoalTitle').textContent = goalName;
+
+            updateVisualSelection(0);
+            scrollToForm();
         }
+
+        // Alapértelmezett kijelölés betöltéskor
+        document.addEventListener('DOMContentLoaded', function() {
+            updateVisualSelection(1);
+        });
 
         document.getElementById('donationAmount').addEventListener('input', function() {
             const amount = this.value || 5000;
