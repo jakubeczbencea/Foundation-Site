@@ -102,25 +102,27 @@
         <div class="container text-">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card-modern p-5 shadow-lg">
+                    <form action="{{ route('donation.checkout') }}" method="POST" class="card-modern p-5 shadow-lg">
+                        @csrf
+                        <input type="hidden" name="goal" id="selectedGoalInput" value="Eszközpark bővítés">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Név *</label>
-                                        <input type="text" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="Teljes neved" required>
+                                        <input type="text" name="donor_name" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="Teljes neved" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Email *</label>
-                                        <input type="email" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="email@example.com" required>
+                                        <input type="email" name="donor_email" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="email@example.com" required>
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-bold fs-5 mb-3">Üzenet (opcionális)</label>
-                                        <textarea class="form-control bg-transparent border-blue text-light" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
+                                        <textarea name="message" class="form-control bg-transparent border-blue text-light" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold fs-5 mb-3">Összeg *</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-blue-gradient text-white border-0">Ft</span>
-                                            <input type="number" class="form-control form-control-lg bg-transparent border-start-0 text-light text-end fs-3" placeholder="5000" min="1000" step="1000" id="donationAmount">
+                                            <input type="number" name="amount" class="form-control form-control-lg bg-transparent border-start-0 text-light text-end fs-3" value="5000" min="1000" step="1000" id="donationAmount" required>
                                 </div>
                             </div>
                             <div class="col-md-6 align-self-end">
@@ -131,7 +133,7 @@
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="anonymous" checked>
+                                    <input class="form-check-input" type="checkbox" name="anonymous" id="anonymous" checked>
                                     <label class="form-check-label text-light-50" for="anonymous">
                                         Névtelen adományozás
                                     </label>
@@ -160,7 +162,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -171,11 +173,22 @@
         function selectGoal(goalId) {
             selectedGoal = goalId;
             document.querySelectorAll('[onclick^="selectGoal"]').forEach(btn => btn.classList.remove('btn-blue-gradient'));
-            event.target.classList.add('btn-blue-gradient');
+
+            // Cél nevének frissítése a hidden inputban
+            const goals = {
+                1: 'Eszközpark bővítés',
+                2: 'Diákprogramok'
+            };
+            document.getElementById('selectedGoalInput').value = goals[goalId];
+
+            if (event && event.target) {
+                event.target.classList.add('btn-blue-gradient');
+            }
         }
 
         function selectCustom() {
             selectedGoal = 0;
+            document.getElementById('selectedGoalInput').value = 'Egyedi támogatás';
             document.querySelectorAll('[onclick^="selectGoal"]').forEach(btn => btn.classList.remove('btn-blue-gradient'));
         }
 

@@ -22,6 +22,10 @@ return Application::configure(basePath: dirname(__DIR__))
 
             return '/';
         });
+
+        $middleware->validateCsrfTokens(except: [
+            '/webhook/stripe',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

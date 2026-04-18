@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StripeController;
 use Illuminate\Support\Facades\Route;
 
 // ============================
@@ -24,6 +25,12 @@ Route::get('/hirek', [PageController::class, 'news'])->name('news');
 Route::get('/kapcsolat', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/impresszum', [PageController::class, 'imprint'])->name('imprint');
 Route::get('/adatvedelem', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
+
+// Stripe fizetés
+Route::post('/donation/checkout', [StripeController::class, 'checkout'])->name('donation.checkout');
+Route::get('/donation/success', [StripeController::class, 'success'])->name('donation.success');
+Route::get('/donation/cancel', [StripeController::class, 'cancel'])->name('donation.cancel');
+Route::post('/webhook/stripe', [StripeController::class, 'webhook']);
 
 // POST: Kapcsolati űrlap elküldése
 Route::post('/kapcsolat', [ContactController::class, 'send'])->name('contact.send');
