@@ -76,15 +76,16 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('contact.send') }}">
+                        <form method="POST" action="{{ route('contact.send') }}" class="row g-4">
                             @csrf
 
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Név</label>
+                            <div class="col-md-6">
+                                <label for="name" class="form-label fw-bold fs-5 mb-3 text-light">Név *</label>
                                 <input type="text"
-                                       class="form-control @error('name') is-invalid @enderror"
+                                       class="form-control form-control-lg bg-transparent border-light-subtle text-white @error('name') is-invalid @enderror"
                                        id="name"
                                        name="name"
+                                       placeholder="Teljes neved"
                                        value="{{ old('name') }}"
                                        required>
                                 @error('name')
@@ -92,12 +93,13 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label for="email" class="form-label">E-mail cím</label>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-bold fs-5 mb-3 text-light">E-mail cím *</label>
                                 <input type="email"
-                                       class="form-control @error('email') is-invalid @enderror"
+                                       class="form-control form-control-lg bg-transparent border-light-subtle text-white @error('email') is-invalid @enderror"
                                        id="email"
                                        name="email"
+                                       placeholder="email@example.com"
                                        value="{{ old('email') }}"
                                        required>
                                 @error('email')
@@ -105,12 +107,13 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Tárgy</label>
+                            <div class="col-12">
+                                <label for="subject" class="form-label fw-bold fs-5 mb-3 text-light">Tárgy *</label>
                                 <input type="text"
-                                       class="form-control @error('subject') is-invalid @enderror"
+                                       class="form-control form-control-lg bg-transparent border-light-subtle text-white @error('subject') is-invalid @enderror"
                                        id="subject"
                                        name="subject"
+                                       placeholder="Üzenet tárgya"
                                        value="{{ old('subject') }}"
                                        required>
                                 @error('subject')
@@ -118,25 +121,62 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Üzenet</label>
-                                <textarea class="form-control @error('message') is-invalid @enderror"
+                            <div class="col-12">
+                                <label for="message" class="form-label fw-bold fs-5 mb-3 text-light">Üzenet *</label>
+                                <textarea class="form-control bg-transparent border-light-subtle text-white @error('message') is-invalid @enderror"
                                           id="message"
                                           name="message"
                                           rows="5"
+                                          placeholder="Miben segíthetünk?"
                                           required>{{ old('message') }}</textarea>
                                 @error('message')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-cta">
-                                <i class="fas fa-paper-plane me-2"></i>Üzenet elküldése
-                            </button>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-blue-gradient btn-lg px-6 py-4 fs-4 w-100">
+                                    <i class="fas fa-paper-plane me-3"></i>Üzenet elküldése
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .btn-blue-gradient {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            border: none;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+        .btn-blue-gradient:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+            color: white !important;
+        }
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #ffffff !important;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+            color: white !important;
+        }
+        .form-control::placeholder {
+            color: rgba(248, 250, 252, 0.5) !important;
+        }
+        .border-light-subtle {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+        .form-control {
+            border-width: 2px !important;
+        }
+        .px-6 {
+            padding-left: 3.5rem !important;
+            padding-right: 3.5rem !important;
+        }
+    </style>
 @endsection
