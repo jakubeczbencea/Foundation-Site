@@ -28,25 +28,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill" href="/">Főoldal</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('home') ? 'active' : '' }}" href="/">Főoldal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill" href="{{ route('about') }}">Rólunk</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Rólunk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill" href="/beszamolo">Beszámolók</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('reports') ? 'active' : '' }}" href="/beszamolo">Beszámolók</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill" href="/hirek">Hírek</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('news') ? 'active' : '' }}" href="/hirek">Hírek</a>
                 </li>
             </ul>
 
             <!-- Gombok JOBB -->
             <div class="d-flex gap-2 ms-lg-4">
-                <a href="/kapcsolat" class="btn btn-outline-light btn-sm px-4 py-2 fw-semibold rounded-pill">
+                <a href="/kapcsolat" class="btn {{ request()->routeIs('contacts') ? 'btn-light' : 'btn-outline-light' }} btn-sm px-4 py-2 fw-semibold rounded-pill">
                     <i class="fas fa-envelope me-1"></i>Kapcsolat
                 </a>
-                <a href="/tamogatas" class="btn btn-warning btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
+                <a href="/tamogatas" class="btn {{ request()->routeIs('donation') ? 'btn-warning border border-2 border-white' : 'btn-warning' }} btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
                     <i class="fas fa-heart me-1"></i>Támogatom
                 </a>
                 @auth

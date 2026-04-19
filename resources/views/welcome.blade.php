@@ -5,18 +5,14 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <div class="row align-items-center min-vh-75">
-            <div class="col-lg-6">
+        <div class="row align-items-center justify-content-center min-vh-75 text-center">
+            <div class="col-lg-10">
                 <h1 class="display-3 fw-bold mb-4">Támogasd a BGéSZC Eötvös Loránd Technikumot!</h1>
                 <p class="lead mb-4 text-light-50">Az alapítvány a műszaki szakképzést támogatja eszközfejlesztéssel, programokkal, versenyekkel és rászoruló diákok segítésével.</p>
-                <div class="d-flex flex-wrap gap-3">
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
                     <a href="/tamogatas" class="btn btn-cta btn-lg px-5">Online adományozás</a>
                     <button class="btn btn-outline-light btn-lg px-5" data-bs-toggle="modal" data-bs-target="#taxModal">Adó 1% felajánlás</button>
                 </div>
-            </div>
-            <div class="col-lg-6 text-center">
-                <!-- Hero kép helye -->
-                <img src="{{ asset('images/hero-school.jpg') }}" class="img-fluid rounded-4 shadow-lg" alt="Diákok műhelyben">
             </div>
         </div>
     </div>
