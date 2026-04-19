@@ -59,18 +59,37 @@
 <section class="section-padding">
     <div class="container">
         <h2 class="text-center mb-5">Eredményeink</h2>
-        <div class="row g-5 gy-5">
+        <div class="row g-4">
             <div class="col-md-4">
                 <div class="card-modern h-100 p-0 overflow-hidden mb-0">
-                    <img src="{{ asset('images/report1.jpg') }}" class="card-img-top" alt="Beszámoló 1">
+                    <img src="{{ asset('images/cnc_machine.jpg') }}" class="card-img-top" alt="CNC gép beszerzés" style="height: 200px; object-fit: cover;">
                     <div class="p-4">
                         <h5 class="card-title">2025-ös eszközbeszerzés</h5>
-                        <p class="text-muted">Három új CNC gép...</p>
-                        <a href="/reports/1" class="btn btn-primary">Tovább</a>
+                        <p class="text-muted small">Három új modern CNC gép került a műhelybe, amellyel a diákok a legújabb technológiákat sajátíthatják el.</p>
+                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
                     </div>
                 </div>
             </div>
-            <!-- 2 további kártya -->
+            <div class="col-md-4">
+                <div class="card-modern h-100 p-0 overflow-hidden mb-0">
+                    <img src="{{ asset('images/robotics-camp.jpg') }}" class="card-img-top" alt="Robotika tábor" style="height: 200px; object-fit: cover;">
+                    <div class="p-4">
+                        <h5 class="card-title">Robotika Nyári Tábor</h5>
+                        <p class="text-muted small">Sikeresen lezajlott az első nyári robotika táborunk, ahol 20 diák épített saját programozható robotot.</p>
+                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-modern h-100 p-0 overflow-hidden mb-0">
+                    <img src="{{ asset('images/competition-win.jpg') }}" class="card-img-top" alt="Verseny győzelem" style="height: 200px; object-fit: cover;">
+                    <div class="p-4">
+                        <h5 class="card-title">Országos Verseny Siker</h5>
+                        <p class="text-muted small">Diákjaink első helyezést értek el az országos CAD/CAM tervezői versenyen, öregbítve iskolánk hírnevét.</p>
+                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

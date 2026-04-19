@@ -136,7 +136,7 @@
                             </div>
                             <div class="col-md-6 align-self-end">
                                 <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter">
                                     <label class="form-check-label text-light-50" for="newsletter">
                                         Hírlevél feliratkozás
                                     </label>
@@ -295,6 +295,12 @@
         // Alapértelmezett kijelölés betöltéskor
         document.addEventListener('DOMContentLoaded', function() {
             updateVisualSelection(1);
+            @if ($errors->any())
+                const formSection = document.getElementById('donation-form-section');
+                if (formSection) {
+                    formSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            @endif
         });
 
         document.getElementById('donationAmount').addEventListener('input', function() {

@@ -18,7 +18,7 @@
     </section>
 
     <!-- Elérhetőségek + kapcsolat űrlap -->
-    <section class="bg-dark-section section-padding">
+    <section id="contact-section" class="bg-dark-section section-padding">
         <div class="container">
             <div class="row g-5">
                 <!-- Elérhetőségek -->
@@ -70,9 +70,9 @@
                             az adományozási lehetőségekről.
                         </p>
 
-                        @if (session('status'))
+                        @if (session('success'))
                             <div class="alert alert-success">
-                                {{ session('status') }}
+                                {{ session('success') }}
                             </div>
                         @endif
 
@@ -179,4 +179,15 @@
             padding-right: 3.5rem !important;
         }
     </style>
+
+    @if (session('success') || $errors->any())
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactSection = document.getElementById('contact-section');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+    @endif
 @endsection

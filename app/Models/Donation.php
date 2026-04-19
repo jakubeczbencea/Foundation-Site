@@ -17,6 +17,7 @@ class Donation extends Model
         'transaction_id',
         'message',
         'is_anonymous',
+        'newsletter',
     ];
 
     protected function casts(): array
@@ -24,6 +25,7 @@ class Donation extends Model
         return [
             'amount' => 'decimal:2',
             'is_anonymous' => 'boolean',
+            'newsletter' => 'boolean',
         ];
     }
 

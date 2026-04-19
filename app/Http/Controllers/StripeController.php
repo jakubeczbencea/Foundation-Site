@@ -31,6 +31,7 @@ class StripeController extends Controller
             'status' => 'pending',
             'message' => $request->message,
             'is_anonymous' => $request->has('anonymous'),
+            'newsletter' => $request->has('newsletter'),
         ]);
 
         $checkoutSession = Session::create([
