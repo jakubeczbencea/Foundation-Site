@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Providers;
+namespace bootstrap;
 
-use App\Models\Post;  // cseréld a saját modelledre
-use App\Policies\PostPolicy;  // cseréld a saját policy-dra
+use App\Models\Post;
+use App\Policies\PostPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Gate;
+
+// cseréld a saját modelledre
+// cseréld a saját policy-dra
 
 class AppServiceProvider extends ServiceProvider
 {
