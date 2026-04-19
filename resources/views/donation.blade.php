@@ -60,7 +60,6 @@
                         <button type="button" class="btn btn-outline-light btn-lg w-100 mb-3">
                             Támogatom ezt <i class="fas fa-arrow-right ms-2"></i>
                         </button>
-                        <small class="text-light-50">Hiányzik: //TODO </small>
                     </div>
                 </div>
 
@@ -111,22 +110,28 @@
                         <input type="hidden" name="goal" id="selectedGoalInput" value="Eszközpark bővítés">
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <label class="form-label fw-bold fs-5 mb-3">Név *</label>
-                                        <input type="text" name="donor_name" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="Teljes neved" required>
+                                <label class="form-label fw-bold fs-5 mb-3 text-light">Név *</label>
+                                        <input type="text" name="donor_name" class="form-control form-control-lg bg-transparent border-light-subtle text-white" placeholder="Teljes neved" required>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label fw-bold fs-5 mb-3">Email *</label>
-                                        <input type="email" name="donor_email" class="form-control form-control-lg bg-transparent border-blue text-light" placeholder="email@example.com" required>
+                                <label class="form-label fw-bold fs-5 mb-3 text-light">Email *</label>
+                                        <input type="email" name="donor_email" class="form-control form-control-lg bg-transparent border-light-subtle text-white" placeholder="email@example.com" required>
                             </div>
                             <div class="col-12">
-                                <label class="form-label fw-bold fs-5 mb-3">Üzenet (opcionális)</label>
-                                        <textarea name="message" class="form-control bg-transparent border-blue text-light" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
+                                <label class="form-label fw-bold fs-5 mb-3 text-light">Üzenet (opcionális)</label>
+                                        <textarea name="message" class="form-control bg-transparent border-light-subtle text-white" rows="3" placeholder="Például: 'Sok sikert a robotcsapatnak!'"></textarea>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label fw-bold fs-5 mb-3">Összeg *</label>
+                                <label class="form-label fw-bold fs-5 mb-3 text-light">Összeg *</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-blue-gradient text-white border-0">Ft</span>
-                                            <input type="number" name="amount" class="form-control form-control-lg bg-transparent border-start-0 text-light text-end fs-3" value="5000" min="1000" step="1000" id="donationAmount" required>
+                                    <button class="btn btn-outline-light border-light-subtle px-3" type="button" onclick="changeAmount(-500)">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="number" name="amount" class="form-control form-control-lg bg-transparent border-light-subtle text-white text-center fs-3 no-spinner" value="1000" min="1000" step="any" id="donationAmount" required>
+                                    <button class="btn btn-outline-light border-light-subtle px-3" type="button" onclick="changeAmount(500)">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                    <span class="input-group-text bg-transparent text-white border-light-subtle ms-2 rounded">Ft</span>
                                 </div>
                             </div>
                             <div class="col-md-6 align-self-end">
@@ -142,11 +147,15 @@
                                         Névtelen adományozás
                                     </label>
                                 </div>
+                                <div id="anonymous-notice" class="mt-2 text-warning small d-none">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    A hatályos jogszabályok értelmében 500.000 Ft feletti adomány esetén a névtelen adományozás nem lehetséges.
+                                </div>
                             </div>
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-blue-gradient btn-lg px-6 py-4 fs-4 w-100">
                                     <i class="fas fa-credit-card me-3"></i>
-                                    Fizetés most <span id="totalAmount" class="ms-2">5,000 Ft</span>
+                                    Fizetés most <span id="totalAmount" class="ms-2">1,000 Ft</span>
                                 </button>
                                 <div class="mt-4 pt-4 border-top border-light border-opacity-20">
                                     <div class="row text-center">
@@ -173,6 +182,37 @@
     </section>
 
     <style>
+        .btn-blue-gradient {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            border: none;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+        .btn-blue-gradient:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+            color: white !important;
+        }
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #ffffff !important;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+            color: white !important;
+        }
+        .form-control::placeholder {
+            color: rgba(248, 250, 252, 0.5) !important;
+        }
+        .input-group-text {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            border-width: 2px !important;
+        }
+        .border-light-subtle {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+        .form-control {
+            border-width: 2px !important;
+        }
         .goal-card {
             cursor: pointer;
             transition: all 0.3s ease !important;
@@ -191,6 +231,16 @@
             background-color: #3B82F6 !important;
             border-color: #3B82F6 !important;
             color: white !important;
+        }
+
+        /* Number input spinner elrejtése */
+        .no-spinner::-webkit-inner-spin-button,
+        .no-spinner::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .no-spinner {
+            -moz-appearance: textfield;
         }
     </style>
 
@@ -248,9 +298,40 @@
         });
 
         document.getElementById('donationAmount').addEventListener('input', function() {
-            const amount = this.value || 5000;
-            document.getElementById('totalAmount').textContent = amount.toLocaleString() + ' Ft';
+            updateTotalDisplay(this.value);
         });
+
+        function changeAmount(delta) {
+            const input = document.getElementById('donationAmount');
+            let currentValue = parseInt(input.value) || 0;
+            let newValue = currentValue + delta;
+
+            if (newValue < parseInt(input.min)) {
+                newValue = parseInt(input.min);
+            }
+
+            input.value = newValue;
+            updateTotalDisplay(newValue);
+        }
+
+        function updateTotalDisplay(amount) {
+            const displayAmount = amount || 0;
+            const numericAmount = parseInt(displayAmount);
+            document.getElementById('totalAmount').textContent = numericAmount.toLocaleString() + ' Ft';
+
+            // Jogszabályi figyelmeztetés és névtelen opció korlátozása
+            const anonymousCheckbox = document.getElementById('anonymous');
+            const notice = document.getElementById('anonymous-notice');
+
+            if (numericAmount >= 500000) {
+                anonymousCheckbox.checked = false;
+                anonymousCheckbox.disabled = true;
+                notice.classList.remove('d-none');
+            } else {
+                anonymousCheckbox.disabled = false;
+                notice.classList.add('d-none');
+            }
+        }
     </script>
 
 @endsection
