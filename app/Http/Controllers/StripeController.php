@@ -62,6 +62,23 @@ class StripeController extends Controller
 
     public function success(Request $request)
     {
+        $sessionId = $request->get('session_id');
+
+        if ($sessionId) {
+            Stripe::setApiKey(config('services.stripe.secret'));
+            try {
+                $session = Session::retrieve($sessionId);
+                $donationId = $session->metadata->donation_id;
+                $donation = Donation::find($donationId);
+
+                if ($donation && $session->payment_status === 'paid' && $donation->status === 'pending') {
+                    $donation->update(['status' => 'completed']);
+                }
+            } catch (\Exception $e) {
+                Log::error('Stripe success check error: ' . $e->getMessage());
+            }
+        }
+
         return view('donation_success');
     }
 

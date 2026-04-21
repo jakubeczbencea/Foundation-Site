@@ -9,7 +9,7 @@
             <i class="fas fa-times-circle fa-5x text-danger mb-4"></i>
             <h1 class="display-4 fw-bold mb-4">A fizetés megszakadt</h1>
             <p class="lead mb-5">Sajnáljuk, de az adományozási folyamat nem sikerült. Próbáld újra később.</p>
-            <a href="{{ route('donation') }}" class="btn btn-blue-gradient btn-lg">Újra próbálom</a>
+            <a href="{{ route('donation') }}" class="btn btn-primary btn-lg">Újra próbálom</a>
         </div>
     </div>
 </section>
