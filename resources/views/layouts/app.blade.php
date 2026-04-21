@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top shadow-lg">
     <div class="container-fluid px-4 px-lg-5">
         <!-- Logo BAL -->
-        <a class="navbar-brand fw-bold fs-3 shrink-0" href="/">
+        <a class="navbar-brand fw-bold fs-3 shrink-0" href="{{ route('home') }}">
             <i class="fas fa-graduation-cap text-primary me-2"></i>
             Tudásodért Alapítvány
         </a>
@@ -28,25 +28,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('home') ? 'active' : '' }}" href="/">Főoldal</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Főoldal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Rólunk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('reports') ? 'active' : '' }}" href="/beszamolo">Beszámolók</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('reports') ? 'active' : '' }}" href="{{ route('reports') }}">Beszámolók</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('news') ? 'active' : '' }}" href="/hirek">Hírek</a>
+                    <a class="nav-link px-4 py-2 rounded-pill {{ request()->routeIs('news') ? 'active' : '' }}" href="{{ route('news') }}">Hírek</a>
                 </li>
             </ul>
 
             <!-- Gombok JOBB -->
             <div class="d-flex gap-2 ms-lg-4">
-                <a href="/kapcsolat" class="btn {{ request()->routeIs('contacts') ? 'btn-light' : 'btn-outline-light' }} btn-sm px-4 py-2 fw-semibold rounded-pill">
+                <a href="{{ route('contacts') }}" class="btn {{ request()->routeIs('contacts') ? 'btn-light' : 'btn-outline-light' }} btn-sm px-4 py-2 fw-semibold rounded-pill">
                     <i class="fas fa-envelope me-1"></i>Kapcsolat
                 </a>
-                <a href="/tamogatas" class="btn {{ request()->routeIs('donation') ? 'btn-warning border border-2 border-white' : 'btn-warning' }} btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
+                <a href="{{ route('donation') }}" class="btn {{ request()->routeIs('donation') ? 'btn-warning border border-2 border-white' : 'btn-warning' }} btn-sm px-5 py-2 fw-bold rounded-pill shadow-sm">
                     <i class="fas fa-heart me-1"></i>Támogatom
                 </a>
                 @auth
@@ -89,9 +89,9 @@
             <div class="col-lg-4 mb-4">
                 <h6 class="fw-bold mb-3">Menü</h6>
                 <ul class="list-unstyled">
-                    <li><a href="/" class="text-light-50 text-decoration-none">Főoldal</a></li>
+                    <li><a href="{{ route('home') }}" class="text-light-50 text-decoration-none">Főoldal</a></li>
                     <li><a href="{{ route('about') }}" class="text-light-50 text-decoration-none">Rólunk</a></li>
-                    <li><a href="/tamogatas" class="text-light-50 text-decoration-none">Támogatás</a></li>
+                    <li><a href="{{ route('donation') }}" class="text-light-50 text-decoration-none">Támogatás</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 mb-4">
@@ -116,8 +116,8 @@
                 <p class="mb-0 text-light-50">&copy; 2026 Tudásodért Alapítvány. Minden jog fenntartva.</p>
             </div>
             <div class="col-md-6 text-md-end">
-                <a href="/adatvedelem" class="text-light-50 me-3 text-decoration-none">Adatvédelem</a>
-                <a href="/impresszum" class="text-light-50 text-decoration-none">Impresszum</a>
+                <a href="{{ route('privacy-policy') }}" class="text-light-50 me-3 text-decoration-none">Adatvédelem</a>
+                <a href="{{ route('imprint') }}" class="text-light-50 text-decoration-none">Impresszum</a>
             </div>
         </div>
     </div>

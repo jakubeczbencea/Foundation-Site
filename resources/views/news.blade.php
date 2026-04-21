@@ -11,7 +11,7 @@
                 Itt találod a Tudásodért Alapítvány legfrissebb híreit, beszámolóit és az Eötvös Loránd Technikum
                 életéhez kapcsolódó fontos eseményeket.
             </p>
-            <a href="/tamogatas" class="btn btn-lg btn-cta">
+            <a href="{{ route('donation') }}" class="btn btn-lg btn-cta">
                 <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
             </a>
         </div>
@@ -95,7 +95,7 @@
                         A fontosabb beszámolókat az iskola hivatalos csatornáin is megosztjuk, így a
                         szülők, diákok és támogatók mindenhol találkozhatnak velük.
                     </p>
-                    <a href="/beszamolo" class="btn btn-outline-light">
+                    <a href="{{ route('reports') }}" class="btn btn-outline-light">
                         <i class="fas fa-file-alt me-2"></i>Részletes beszámolók megtekintése
                     </a>
                 </div>
@@ -110,7 +110,7 @@
                             Célunk az átláthatóság: minden jelentősebb projekt után beszámolót
                             készítünk, hogy pontosan lásd, milyen eredményeket értünk el közösen.
                         </p>
-                        <a href="/tamogatas" class="btn btn-cta">
+                        <a href="{{ route('donation') }}" class="btn btn-cta">
                             <i class="fas fa-heart me-2"></i>Szeretnék hozzájárulni
                         </a>
                     </div>

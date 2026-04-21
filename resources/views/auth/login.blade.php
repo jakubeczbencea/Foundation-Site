@@ -66,7 +66,7 @@
                     </form>
 
                     <div class="text-center mt-4">
-                        <a href="/" class="text-muted text-decoration-none">
+                        <a href="{{ route('home') }}" class="text-muted text-decoration-none">
                             <i class="fas fa-arrow-left me-1"></i>Vissza a főoldalra
                         </a>
                     </div>

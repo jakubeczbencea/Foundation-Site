@@ -10,7 +10,7 @@
                 <h1 class="display-3 fw-bold mb-4">Támogasd a BGéSZC Eötvös Loránd Technikumot!</h1>
                 <p class="lead mb-4 text-light-50">Az alapítvány a műszaki szakképzést támogatja eszközfejlesztéssel, programokkal, versenyekkel és rászoruló diákok segítésével.</p>
                 <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="/tamogatas" class="btn btn-cta btn-lg px-5">Online adományozás</a>
+                    <a href="{{ route('donation') }}" class="btn btn-cta btn-lg px-5">Online adományozás</a>
                     <button class="btn btn-outline-light btn-lg px-5" data-bs-toggle="modal" data-bs-target="#taxModal">Adó 1% felajánlás</button>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <div class="p-4">
                         <h5 class="card-title">2025-ös eszközbeszerzés</h5>
                         <p class="text-muted small">Három új modern CNC gép került a műhelybe, amellyel a diákok a legújabb technológiákat sajátíthatják el.</p>
-                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
+                        <a href="{{ route('reports') }}" class="btn btn-primary btn-sm">Tovább</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <div class="p-4">
                         <h5 class="card-title">Robotika Nyári Tábor</h5>
                         <p class="text-muted small">Sikeresen lezajlott az első nyári robotika táborunk, ahol 20 diák épített saját programozható robotot.</p>
-                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
+                        <a href="{{ route('reports') }}" class="btn btn-primary btn-sm">Tovább</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     <div class="p-4">
                         <h5 class="card-title">Országos Verseny Siker</h5>
                         <p class="text-muted small">Diákjaink első helyezést értek el az országos CAD/CAM tervezői versenyen, öregbítve iskolánk hírnevét.</p>
-                        <a href="/beszamolo" class="btn btn-primary btn-sm">Tovább</a>
+                        <a href="{{ route('reports') }}" class="btn btn-primary btn-sm">Tovább</a>
                     </div>
                 </div>
             </div>

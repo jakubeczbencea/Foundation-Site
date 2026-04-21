@@ -11,7 +11,7 @@
                 lásd, mire használtuk fel a támogatásokat
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="/tamogatas" class="btn btn-lg btn-cta">
+                <a href="{{ route('donation') }}" class="btn btn-lg btn-cta">
                     <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
                 </a>
             </div>

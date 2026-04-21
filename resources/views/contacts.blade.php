@@ -11,7 +11,7 @@
                 Vedd fel velünk a kapcsolatot, ha kérdésed van az alapítvány működésével,
                 az adományozással vagy az iskolai projektekkel kapcsolatban.
             </p>
-            <a href="/tamogatas" class="btn btn-lg btn-cta">
+            <a href="{{ route('donation') }}" class="btn btn-lg btn-cta">
                 <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
             </a>
         </div>

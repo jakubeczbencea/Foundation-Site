@@ -11,7 +11,7 @@
                 A Tudásodért Alapítvány célja, hogy a BGéSZC Eötvös Loránd Technikum diákjainak
                 fejlődését, tanulmányait és közösségi életét hosszú távon támogassa.
             </p>
-            <a href="/tamogatas" class="btn btn-lg btn-cta">
+            <a href="{{ route('donation') }}" class="btn btn-lg btn-cta">
                 <i class="fas fa-heart me-2"></i>Támogatom az alapítványt
             </a>
         </div>
@@ -102,7 +102,7 @@
                             A támogatások felhasználásáról beszámolók és hírek formájában is tájékoztatást
                             adunk, hogy mindig lásd, mire fordítjuk a segítségedet.
                         </p>
-                        <a href="/beszamolo" class="btn btn-outline-light">
+                        <a href="{{ route('reports') }}" class="btn btn-outline-light">
                             <i class="fas fa-file-alt me-2"></i>Beszámolók megtekintése
                         </a>
                     </div>

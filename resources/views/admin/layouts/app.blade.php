@@ -64,7 +64,7 @@
 
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="/" target="_blank">
+                <a class="nav-link" href="{{ route('home') }}" target="_blank">
                     <i class="fas fa-external-link-alt"></i>
                     <span>Oldal megtekintése</span>
                 </a>
