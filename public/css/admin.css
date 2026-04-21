@@ -157,7 +157,6 @@
 }
 
 /* --- Admin Card (táblázatok, formok) --- */
-/* Kártya alap */
 .admin-card {
     background-color: #181a1b !important;
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -165,53 +164,53 @@
     overflow: hidden;
 }
 
-.admin-card.card,
-.admin-card .card-body {
-    background-color: #181a1b !important;
+.admin-card-header {
+    background-color: #181a1b;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
-/* Táblázat és sorok háttérszíne */
-.admin-card table,
-.admin-card thead,
-.admin-card tbody,
-.admin-card tr,
-.admin-card td,
-.admin-card th {
-    background-color: #181a1b !important;
-}
-
-.admin-card .admin-table tbody td:nth-child(2) {
-    color: #ffffff !important;
+.admin-card-header h5 {
+    margin: 0;
     font-weight: 600;
+    color: #fff;
 }
 
-/* Mód */
-.admin-card .admin-table tbody td:nth-child(5) {
-    color: #ffffff !important;
-}
-
-/* Legutóbbi adományok – Adományozó neve */
-.admin-card .admin-table tbody td:nth-child(1) {
-    color: #ffffff !important;
-    font-weight: 600;
-}
-
-/* Legutóbbi bejegyzések – Cím */
-.admin-card .admin-table tbody td:nth-child(1) {
-    color: #ffffff !important;
-    font-weight: 600;
+.admin-card-body {
+    background-color: #181a1b;
+    padding: 1.5rem;
 }
 
 /* --- Admin Table --- */
 .admin-table {
+    --bs-table-color: #e0e0e0;
+    --bs-table-bg: #181a1b;
+    --bs-table-border-color: rgba(255, 255, 255, 0.04);
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.01);
+    --bs-table-hover-bg: rgba(78, 123, 255, 0.04);
+    --bs-table-hover-color: #ffffff;
+
     color: #e0e0e0;
+    background-color: #181a1b;
     margin-bottom: 0;
 }
 
+.admin-table > :not(caption) > * > * {
+    background-color: var(--bs-table-bg) !important;
+    color: var(--bs-table-color);
+    box-shadow: none !important;
+}
+
 .admin-table thead th {
-    background: rgba(78, 123, 255, 0.05);
+    background-color: #11121c !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    color: #8a8fa8;
+    color: #8a8fa8 !important;
     font-weight: 600;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -225,10 +224,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     vertical-align: middle;
     font-size: 0.9rem;
+    color: #cfd3df;
 }
 
-.admin-table tbody tr:hover {
-    background: rgba(78, 123, 255, 0.04);
+.admin-table tbody tr:hover > * {
+    background-color: rgba(78, 123, 255, 0.04) !important;
 }
 
 .admin-table tbody tr:last-child td {
