@@ -15,11 +15,11 @@
     <div class="row g-4">
         <!-- Alapadatok -->
         <div class="col-lg-6">
-            <div class="admin-card">
-                <div class="admin-card-header">
+            <div class="admin-card-settings">
+                <div class="admin-card-header-settings">
                     <h5><i class="fas fa-university me-2"></i>Alapítvány adatai</h5>
                 </div>
-                <div class="admin-card-body">
+                <div class="admin-card-body-settings">
                     <div class="mb-3">
                         <label class="form-label">Oldal neve</label>
                         <input type="text" name="site_name" class="form-control"
@@ -47,11 +47,11 @@
 
         <!-- Elérhetőségek -->
         <div class="col-lg-6">
-            <div class="admin-card">
-                <div class="admin-card-header">
+            <div class="admin-card-settings">
+                <div class="admin-card-header-settings">
                     <h5><i class="fas fa-address-card me-2"></i>Elérhetőségek</h5>
                 </div>
-                <div class="admin-card-body">
+                <div class="admin-card-body-settings">
                     <div class="mb-3">
                         <label class="form-label">Email cím</label>
                         <input type="email" name="email" class="form-control"
@@ -83,11 +83,11 @@
 
         <!-- Fizetési beállítások -->
         <div class="col-lg-6">
-            <div class="admin-card">
-                <div class="admin-card-header">
+            <div class="admin-card-settings">
+                <div class="admin-card-header-settings">
                     <h5><i class="fas fa-credit-card me-2"></i>Fizetési beállítások</h5>
                 </div>
-                <div class="admin-card-body">
+                <div class="admin-card-body-settings">
                     <div class="mb-3">
                         <label class="form-label">Bank neve</label>
                         <input type="text" name="bank_name" class="form-control"

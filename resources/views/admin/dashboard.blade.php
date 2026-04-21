@@ -70,11 +70,11 @@
 
     <!-- Gyors infó -->
     <div class="col-lg-4">
-        <div class="admin-card h-100">
-            <div class="admin-card-header">
+        <div class="stat-card h-100">
+            <div class="stat-card-header">
                 <h5><i class="fas fa-info-circle me-2"></i>Összefoglaló</h5>
             </div>
-            <div class="admin-card-body">
+            <div class="stat-card-body">
                 <div class="d-flex justify-content-between mb-3">
                     <span class="text-muted">Sikeres adományok</span>
                     <span class="fw-bold">{{ $stats['donations_count'] }} db</span>

@@ -186,6 +186,37 @@
     padding: 1.5rem;
 }
 
+/* --- Admin Card Settings (táblázatok, formok) --- */
+
+.admin-card-settings {
+    background-color: #11121c !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-card-header-settings {
+    background-color: #11121c;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.admin-card-header-settings h5 {
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.admin-card-body-settings {
+    background-color: #11121c;
+    padding: 1.5rem;
+}
+
 /* --- Admin Table --- */
 .admin-table {
     --bs-table-color: #e0e0e0;
@@ -208,7 +239,6 @@
 }
 
 .admin-table thead th {
-    background-color: #11121c !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #8a8fa8 !important;
     font-weight: 600;
