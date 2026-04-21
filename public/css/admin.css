@@ -157,31 +157,49 @@
 }
 
 /* --- Admin Card (táblázatok, formok) --- */
+/* Kártya alap */
 .admin-card {
-    background: #161822;
+    background-color: #181a1b !important;
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     overflow: hidden;
 }
 
-.admin-card-header {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+.admin-card.card,
+.admin-card .card-body {
+    background-color: #181a1b !important;
 }
 
-.admin-card-header h5 {
-    margin: 0;
+/* Táblázat és sorok háttérszíne */
+.admin-card table,
+.admin-card thead,
+.admin-card tbody,
+.admin-card tr,
+.admin-card td,
+.admin-card th {
+    background-color: #181a1b !important;
+}
+
+.admin-card .admin-table tbody td:nth-child(2) {
+    color: #ffffff !important;
     font-weight: 600;
-    color: #fff;
 }
 
-.admin-card-body {
-    padding: 1.5rem;
+/* Mód */
+.admin-card .admin-table tbody td:nth-child(5) {
+    color: #ffffff !important;
+}
+
+/* Legutóbbi adományok – Adományozó neve */
+.admin-card .admin-table tbody td:nth-child(1) {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Legutóbbi bejegyzések – Cím */
+.admin-card .admin-table tbody td:nth-child(1) {
+    color: #ffffff !important;
+    font-weight: 600;
 }
 
 /* --- Admin Table --- */
